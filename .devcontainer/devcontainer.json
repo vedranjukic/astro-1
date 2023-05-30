@@ -1,6 +1,6 @@
 {
   "name": "Astro Netlify Showcase",
-  "image": "netlify/build",
+  "image": "netlify/build:focal",
 
   // Configure tool-specific properties.
   "customizations": {
@@ -12,7 +12,15 @@
     }
   },
 
-  "features": {}
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:1": {
+      "installZsh": "true",
+      "username": "netlify",
+      "uid": "1000",
+      "gid": "1000",
+      "upgradePackages": "false"
+    }
+  },
   // Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-  //    "remoteUser": "netlify"
+  "remoteUser": "netlify"
 }
